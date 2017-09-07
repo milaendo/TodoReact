@@ -13,7 +13,7 @@ class TodoItem extends Component {
 			<li className={this.props.todo.status}>
 			<button onClick={this.remove}>Remove</button>
 			<button onClick={this.complete}>Complete</button>	
-			{this.props.todo.title}
+			{this.props.todo.todo}
 			</li>
 		)
 	}

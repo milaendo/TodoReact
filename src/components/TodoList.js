@@ -9,7 +9,7 @@ class TodoList extends Component {
 			<div>
 				<ul>
 				{this.props.todos.map((todo) => (
-					<TodoItem key={todo.id} todo={todo.todo}/>
+					<TodoItem key={todo.id} todo={todo}/>
 				))}	
 				</ul>
 			</div>
@@ -17,6 +17,7 @@ class TodoList extends Component {
 	}
 }
 function mapSateToProps (appState){
+	console.log(appState.todos)
 	return {
 		todos:appState.todos
 	}

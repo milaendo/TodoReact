@@ -11,7 +11,7 @@ export function addTodo(todo){
 		}
 	})
 }
-console.log(this.status)
+
 export function removeTodo(id){
 	store.dispatch({
 		type:'REMOVE_TODO',

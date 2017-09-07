@@ -12,11 +12,7 @@ class TodoForm extends Component {
 	}
 	handleSubmit = (e) => {
 		e.preventDefault()
-		addTodo({
-			title:this.state.title,
-			id:this.state.id,
-			status:this.state.status
-		})
+		addTodo(this.state.title)
 		this.setState({
 			title:""
 		})

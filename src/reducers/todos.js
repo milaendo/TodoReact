@@ -7,11 +7,11 @@ export default function(state = initialState,action){
 		case 'ADD_TODO':
 			return{...state,todos: [...state.todos, action.todo]}
 		case 'REMOVE_TODO':
-			return{...state,todos: state.todos.filter(todo => todo.todo.id !== action.id)} 
+			return{...state,todos: state.todos.filter(todo => todo.id !== action.id)} 
 		case 'COMPLETE_TODO':
-			return{...state,todos: state.todos.map(todo => {
-				if(todo.todo.id === action.id){
-					return(...todo, status: 'completed')
+			return {...state, todos: state.todos.map(todo => {
+				if(todo.id === action.id){
+					return {...todo, status: 'completed'}
 				}else{
 					return todo
 				}
